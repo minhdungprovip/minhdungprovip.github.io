@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Siêu Xe VIP cùa Dũng</title>
+<title>Siêu Xe VIP của Dũng</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
@@ -104,68 +104,25 @@ padding:60px 10%;
 margin-top:50px;
 border-top:1px solid rgba(255,255,255,0.1);
 }
-
 .footer-container{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:30px;
 }
-
-.footer-box h3{
-color:#4da3ff;
-margin-bottom:15px;
-}
-
+.footer-box h3{color:#4da3ff;margin-bottom:15px;}
 .footer-box p, .footer-box a{
-font-size:0.9rem;
-margin:6px 0;
-opacity:0.8;
-transition:0.3s;
-text-decoration:none;
-color:white;
-display:block;
+font-size:0.9rem;margin:6px 0;opacity:0.8;color:white;
+text-decoration:none;display:block;
 }
-
 .footer-box p:hover, .footer-box a:hover{
-color:#4da3ff;
-transform:translateX(5px);
+color:#4da3ff;transform:translateX(5px);
 }
 
-/* CREDIT XỊN */
-.credit{
-margin-top:40px;
-padding-top:20px;
-border-top:1px solid rgba(255,255,255,0.1);
-text-align:center;
-}
-
+/* CREDIT */
+.credit{text-align:center;margin-top:30px;}
 .credit-name{
-font-weight:700;
-font-size:1.2rem;
-color:#4da3ff;
-text-shadow:0 0 10px #4da3ff, 0 0 20px #4da3ff;
-}
-
-.credit-contact{
-margin-top:10px;
-font-size:0.9rem;
-opacity:0.8;
-}
-
-.credit-contact span{
-display:block;
-margin:5px 0;
-}
-
-.credit-contact span:hover{
-color:#4da3ff;
-}
-
-.footer-bottom{
-text-align:center;
-margin-top:20px;
-font-size:0.8rem;
-opacity:0.6;
+font-weight:700;font-size:1.2rem;color:#4da3ff;
+text-shadow:0 0 10px #4da3ff;
 }
 </style>
 </head>
@@ -192,74 +149,57 @@ opacity:0.6;
 <!-- Ô TÔ -->
 <section id="carTab">
 <div class="grid">
-
 <div class="card" onclick="openDetail('bugatti')"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Bugatti_Chiron_1.jpg"><div class="overlay">Bugatti</div></div>
 <div class="card" onclick="openDetail('lambo')"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70"><div class="overlay">Lamborghini</div></div>
 <div class="card" onclick="openDetail('ferrari')"><img src="https://images.unsplash.com/photo-1614200187524-dc4b892acf16"><div class="overlay">Ferrari</div></div>
-
 <div class="card" onclick="openDetail('mclaren')"><img src="https://images.unsplash.com/photo-1590362891991-f776e747a588"><div class="overlay">McLaren</div></div>
 <div class="card" onclick="openDetail('koenigsegg')"><img src="https://news.dupontregistry.com/cdn/shop/articles/Snapinsta.app_424480670_1773512393162429_5623901643462568802_n_1080.jpg?v=1767071160"><div class="overlay">Jesko</div></div>
 <div class="card" onclick="openDetail('porsche')"><img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888"><div class="overlay">Porsche</div></div>
-
 </div>
 </section>
 
 <!-- MOTOR -->
 <section id="motorTab" style="display:none;">
 <div class="grid">
-
 <div class="card" onclick="openDetail('ducati')"><img src="https://etimg.etb2bimg.com/photo/115017336.cms"><div class="overlay">Ducati</div></div>
 <div class="card" onclick="openDetail('bmw')"><img src="https://images.unsplash.com/photo-1580310614729-ccd69652491d"><div class="overlay">BMW</div></div>
 <div class="card" onclick="openDetail('kawasaki')"><img src="https://autopro8.mediacdn.vn/2021/11/3/h2r10-16359036006881712791251.jpeg"><div class="overlay">Kawasaki</div></div>
-
 <div class="card" onclick="openDetail('yamaha')"><img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65"><div class="overlay">Yamaha</div></div>
-<div class="card" onclick="openDetail('honda')"><img src="https://i1-vnexpress.vnecdn.net/2023/04/13/Honda-CBR1000RR-R-Fireblade-2022-1.jpg?w=750&h=0&q=100&dpr=1&fit=crop&s=QWBSWqbVS4UKoFWYQN__mA"><div class="overlay">Honda</div></div>
+<div class="card" onclick="openDetail('honda')"><img src="https://i1-vnexpress.vnecdn.net/2023/04/13/Honda-CBR1000RR-R-Fireblade-2022-1.jpg?w=750"><div class="overlay">Honda</div></div>
 <div class="card" onclick="openDetail('suzuki')"><img src="https://autopress.vn/uploads/userfiles/images/news_1537564497/Suzuki-GSX-R1000-Ryuyo-16.jpg"><div class="overlay">Suzuki</div></div>
-
 </div>
 </section>
 
+<!-- DETAIL -->
+<div class="detail" id="detailPage">
+<div class="back" onclick="goHome()">⬅ Quay lại</div>
+
+<img id="dImg">
+<h1 id="dName"></h1>
+<p id="dDesc"></p>
+
+<video id="dVideo" controls></video>
+
+<div class="specs" id="specs"></div>
+
+<a id="buyLink" target="_blank">
+<button class="btn">Mua ngay</button>
+</a>
+</div>
+
 <!-- FOOTER -->
 <footer class="footer">
-
 <div class="footer-container">
-
-<div class="footer-box">
-<h3>SuperCar</h3>
-<p>Website trưng bày siêu xe & mô tô đỉnh cao.</p>
-</div>
-
 <div class="footer-box">
 <h3>Liên hệ</h3>
-<p>📞 0123 456 789</p>
-<p>📧 supercar@gmail.com</p>
-<p>📍 Việt Nam</p>
+<p>📞 0987 654 321</p>
+<p>📧 dungdz@gmail.com</p>
+</div>
 </div>
 
-<div class="footer-box">
-<h3>Mạng xã hội</h3>
-<a href="#">Facebook</a>
-<a href="#">Instagram</a>
-<a href="#">YouTube</a>
-</div>
-
-</div>
-
-<!-- CREDIT BY -->
 <div class="credit">
 <div class="credit-name">👨‍💻 Trịnh Minh Dũng</div>
-
-<div class="credit-contact">
-<span>📧 Email: dungdz@gmail.com</span>
-<span>📞 SĐT: 0987 654 321</span>
-<span>🌐 Facebook: fb.com/dungdz</span>
 </div>
-
-<div class="footer-bottom">
-© 2026 SuperCar | All Rights Reserved
-</div>
-</div>
-
 </footer>
 
 <script>
@@ -270,8 +210,42 @@ document.getElementById("carTab").scrollIntoView({behavior:"smooth"});
 function showTab(type){
 carTab.style.display= type==="car"?"block":"none";
 motorTab.style.display= type==="motor"?"block":"none";
-document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
-event.target.classList.add("active");
+}
+
+const data={
+bugatti:{name:"Bugatti Chiron",img:"https://upload.wikimedia.org/wikipedia/commons/1/18/Bugatti_Chiron_1.jpg",desc:"1500HP",video:"https://www.w3schools.com/html/mov_bbb.mp4",specs:{"HP":"1500"},link:"https://bugatti.com"},
+lambo:{name:"Lamborghini Aventador",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70",desc:"770HP",video:"https://www.w3schools.com/html/movie.mp4",specs:{"HP":"770"},link:"https://lamborghini.com"},
+ferrari:{name:"Ferrari SF90",img:"https://images.unsplash.com/photo-1614200187524-dc4b892acf16",desc:"1000HP",video:"https://www.w3schools.com/html/mov_bbb.mp4",specs:{"HP":"1000"},link:"https://ferrari.com"},
+mclaren:{name:"McLaren 720S",img:"https://images.unsplash.com/photo-1590362891991-f776e747a588",desc:"720HP",video:"https://www.w3schools.com/html/movie.mp4",specs:{"HP":"720"},link:"https://mclaren.com"},
+koenigsegg:{name:"Jesko",img:"https://news.dupontregistry.com/cdn/shop/articles/Snapinsta.app_424480670_1773512393162429_5623901643462568802_n_1080.jpg?v=1767071160",desc:"1600HP",video:"https://www.w3schools.com/html/mov_bbb.mp4",specs:{"HP":"1600"},link:"https://koenigsegg.com"},
+porsche:{name:"Porsche 911",img:"https://images.unsplash.com/photo-1583121274602-3e2820c69888",desc:"640HP",video:"https://www.w3schools.com/html/movie.mp4",specs:{"HP":"640"},link:"https://porsche.com"}
+};
+
+function openDetail(id){
+let car=data[id];
+dImg.src=car.img;
+dName.innerText=car.name;
+dDesc.innerText=car.desc;
+dVideo.src=car.video;
+
+let html="";
+for(let k in car.specs){
+html+=`<div class="spec">${k}: ${car.specs[k]}</div>`;
+}
+specs.innerHTML=html;
+
+buyLink.href=car.link;
+
+home.style.display="none";
+carTab.style.display="none";
+motorTab.style.display="none";
+detailPage.style.display="block";
+}
+
+function goHome(){
+home.style.display="flex";
+carTab.style.display="block";
+detailPage.style.display="none";
 }
 </script>
 
