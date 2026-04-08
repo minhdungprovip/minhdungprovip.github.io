@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Siêu Xe VIP của Dũng</title>
+<title>Siêu Xe VIP</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
@@ -75,7 +75,6 @@ opacity:0;transition:0.3s;
 
 /* DETAIL */
 .detail{display:none;padding:100px 10%;}
-.detail img{width:100%;border-radius:15px;margin-bottom:20px;}
 video{width:100%;margin:20px 0;border-radius:15px;}
 .specs{
 display:grid;
@@ -99,30 +98,8 @@ border:none;border-radius:10px;
 
 /* FOOTER */
 .footer{
-background:#000;
-padding:60px 10%;
-margin-top:50px;
-border-top:1px solid rgba(255,255,255,0.1);
-}
-.footer-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
-}
-.footer-box h3{color:#4da3ff;margin-bottom:15px;}
-.footer-box p, .footer-box a{
-font-size:0.9rem;margin:6px 0;opacity:0.8;color:white;
-text-decoration:none;display:block;
-}
-.footer-box p:hover, .footer-box a:hover{
-color:#4da3ff;transform:translateX(5px);
-}
-
-/* CREDIT */
-.credit{text-align:center;margin-top:30px;}
-.credit-name{
-font-weight:700;font-size:1.2rem;color:#4da3ff;
-text-shadow:0 0 10px #4da3ff;
+background:#000;padding:40px 10%;
+margin-top:40px;text-align:center;
 }
 </style>
 </head>
@@ -149,24 +126,30 @@ text-shadow:0 0 10px #4da3ff;
 <!-- Ô TÔ -->
 <section id="carTab">
 <div class="grid">
+
 <div class="card" onclick="openDetail('bugatti')"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Bugatti_Chiron_1.jpg"><div class="overlay">Bugatti</div></div>
 <div class="card" onclick="openDetail('lambo')"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70"><div class="overlay">Lamborghini</div></div>
 <div class="card" onclick="openDetail('ferrari')"><img src="https://images.unsplash.com/photo-1614200187524-dc4b892acf16"><div class="overlay">Ferrari</div></div>
+
 <div class="card" onclick="openDetail('mclaren')"><img src="https://images.unsplash.com/photo-1590362891991-f776e747a588"><div class="overlay">McLaren</div></div>
-<div class="card" onclick="openDetail('koenigsegg')"><img src="https://news.dupontregistry.com/cdn/shop/articles/Snapinsta.app_424480670_1773512393162429_5623901643462568802_n_1080.jpg?v=1767071160"><div class="overlay">Jesko</div></div>
+<div class="card" onclick="openDetail('koenigsegg')"><img src="https://images.unsplash.com/photo-1617654112329-9c5f75f1a4bb"><div class="overlay">Jesko</div></div>
 <div class="card" onclick="openDetail('porsche')"><img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888"><div class="overlay">Porsche</div></div>
+
 </div>
 </section>
 
 <!-- MOTOR -->
 <section id="motorTab" style="display:none;">
 <div class="grid">
-<div class="card" onclick="openDetail('ducati')"><img src="https://etimg.etb2bimg.com/photo/115017336.cms"><div class="overlay">Ducati</div></div>
+
+<div class="card" onclick="openDetail('ducati')"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9"><div class="overlay">Ducati</div></div>
 <div class="card" onclick="openDetail('bmw')"><img src="https://images.unsplash.com/photo-1580310614729-ccd69652491d"><div class="overlay">BMW</div></div>
-<div class="card" onclick="openDetail('kawasaki')"><img src="https://autopro8.mediacdn.vn/2021/11/3/h2r10-16359036006881712791251.jpeg"><div class="overlay">Kawasaki</div></div>
+<div class="card" onclick="openDetail('kawasaki')"><img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39"><div class="overlay">Kawasaki</div></div>
+
 <div class="card" onclick="openDetail('yamaha')"><img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65"><div class="overlay">Yamaha</div></div>
-<div class="card" onclick="openDetail('honda')"><img src="https://i1-vnexpress.vnecdn.net/2023/04/13/Honda-CBR1000RR-R-Fireblade-2022-1.jpg?w=750"><div class="overlay">Honda</div></div>
-<div class="card" onclick="openDetail('suzuki')"><img src="https://autopress.vn/uploads/userfiles/images/news_1537564497/Suzuki-GSX-R1000-Ryuyo-16.jpg"><div class="overlay">Suzuki</div></div>
+<div class="card" onclick="openDetail('honda')"><img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb"><div class="overlay">Honda</div></div>
+<div class="card" onclick="openDetail('suzuki')"><img src="https://images.unsplash.com/photo-1611242320536-f12d3541249b"><div class="overlay">Suzuki</div></div>
+
 </div>
 </section>
 
@@ -174,7 +157,6 @@ text-shadow:0 0 10px #4da3ff;
 <div class="detail" id="detailPage">
 <div class="back" onclick="goHome()">⬅ Quay lại</div>
 
-<img id="dImg">
 <h1 id="dName"></h1>
 <p id="dDesc"></p>
 
@@ -185,21 +167,28 @@ text-shadow:0 0 10px #4da3ff;
 <a id="buyLink" target="_blank">
 <button class="btn">Mua ngay</button>
 </a>
+
+<div class="survey">
+<h3>Khảo sát sở thích</h3>
+<input placeholder="Tên của bạn">
+<select>
+<option>Loại xe</option>
+<option>Ô tô</option>
+<option>Motor</option>
+</select>
+<select>
+<option>Hãng yêu thích</option>
+<option>Ferrari</option>
+<option>Lamborghini</option>
+<option>Bugatti</option>
+</select>
+<button class="btn">Gửi</button>
 </div>
 
-<!-- FOOTER -->
+</div>
+
 <footer class="footer">
-<div class="footer-container">
-<div class="footer-box">
-<h3>Liên hệ</h3>
-<p>📞 0987 654 321</p>
-<p>📧 dungdz@gmail.com</p>
-</div>
-</div>
-
-<div class="credit">
-<div class="credit-name">👨‍💻 Trịnh Minh Dũng</div>
-</div>
+© 2026 SuperCar | Liên hệ: supercar@gmail.com
 </footer>
 
 <script>
@@ -210,20 +199,28 @@ document.getElementById("carTab").scrollIntoView({behavior:"smooth"});
 function showTab(type){
 carTab.style.display= type==="car"?"block":"none";
 motorTab.style.display= type==="motor"?"block":"none";
+document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+event.target.classList.add("active");
 }
 
 const data={
-bugatti:{name:"Bugatti Chiron",img:"https://upload.wikimedia.org/wikipedia/commons/1/18/Bugatti_Chiron_1.jpg",desc:"1500HP",video:"https://www.w3schools.com/html/mov_bbb.mp4",specs:{"HP":"1500"},link:"https://bugatti.com"},
-lambo:{name:"Lamborghini Aventador",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70",desc:"770HP",video:"https://www.w3schools.com/html/movie.mp4",specs:{"HP":"770"},link:"https://lamborghini.com"},
-ferrari:{name:"Ferrari SF90",img:"https://images.unsplash.com/photo-1614200187524-dc4b892acf16",desc:"1000HP",video:"https://www.w3schools.com/html/mov_bbb.mp4",specs:{"HP":"1000"},link:"https://ferrari.com"},
-mclaren:{name:"McLaren 720S",img:"https://images.unsplash.com/photo-1590362891991-f776e747a588",desc:"720HP",video:"https://www.w3schools.com/html/movie.mp4",specs:{"HP":"720"},link:"https://mclaren.com"},
-koenigsegg:{name:"Jesko",img:"https://news.dupontregistry.com/cdn/shop/articles/Snapinsta.app_424480670_1773512393162429_5623901643462568802_n_1080.jpg?v=1767071160",desc:"1600HP",video:"https://www.w3schools.com/html/mov_bbb.mp4",specs:{"HP":"1600"},link:"https://koenigsegg.com"},
-porsche:{name:"Porsche 911",img:"https://images.unsplash.com/photo-1583121274602-3e2820c69888",desc:"640HP",video:"https://www.w3schools.com/html/movie.mp4",specs:{"HP":"640"},link:"https://porsche.com"}
+bugatti:{name:"Bugatti Chiron",desc:"1500HP",video:"https://www.w3schools.com/html/mov_bbb.mp4",specs:{"HP":"1500"},link:"https://bugatti.com"},
+lambo:{name:"Lamborghini Aventador",desc:"V12",video:"https://www.w3schools.com/html/movie.mp4",specs:{"HP":"770"},link:"https://lamborghini.com"},
+ferrari:{name:"Ferrari SF90",desc:"Hybrid",video:"https://www.w3schools.com/html/mov_bbb.mp4",specs:{"HP":"1000"},link:"https://ferrari.com"},
+mclaren:{name:"McLaren 720S",desc:"720HP",video:"https://www.w3schools.com/html/movie.mp4",specs:{"HP":"720"},link:"https://mclaren.com"},
+koenigsegg:{name:"Jesko",desc:"1600HP",video:"https://www.w3schools.com/html/mov_bbb.mp4",specs:{"HP":"1600"},link:"https://koenigsegg.com"},
+porsche:{name:"Porsche 911",desc:"640HP",video:"https://www.w3schools.com/html/movie.mp4",specs:{"HP":"640"},link:"https://porsche.com"},
+
+ducati:{name:"Ducati Panigale V4",desc:"214HP",video:"https://www.w3schools.com/html/mov_bbb.mp4",specs:{"HP":"214"},link:"https://ducati.com"},
+bmw:{name:"BMW S1000RR",desc:"205HP",video:"https://www.w3schools.com/html/movie.mp4",specs:{"HP":"205"},link:"https://bmw.com"},
+kawasaki:{name:"Kawasaki H2R",desc:"310HP",video:"https://www.w3schools.com/html/mov_bbb.mp4",specs:{"HP":"310"},link:"https://kawasaki.com"},
+yamaha:{name:"Yamaha R1",desc:"200HP",video:"https://www.w3schools.com/html/movie.mp4",specs:{"HP":"200"},link:"https://yamaha.com"},
+honda:{name:"Honda CBR1000RR",desc:"189HP",video:"https://www.w3schools.com/html/mov_bbb.mp4",specs:{"HP":"189"},link:"https://honda.com"},
+suzuki:{name:"Suzuki GSX-R1000",desc:"199HP",video:"https://www.w3schools.com/html/movie.mp4",specs:{"HP":"199"},link:"https://suzuki.com"}
 };
 
 function openDetail(id){
 let car=data[id];
-dImg.src=car.img;
 dName.innerText=car.name;
 dDesc.innerText=car.desc;
 dVideo.src=car.video;
